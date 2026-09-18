@@ -1,0 +1,122 @@
+.mth-seat-available {
+  outline: 3px solid #17c964 !important;
+  outline-offset: -2px !important;
+  box-shadow: 0 0 6px rgba(23, 201, 100, 0.85) !important;
+  border-radius: 3px;
+}
+
+.mth-flash {
+  animation: mth-flash-anim 0.9s ease-in-out;
+}
+
+@keyframes mth-flash-anim {
+  0%,
+  100% {
+    box-shadow: 0 0 6px rgba(23, 201, 100, 0.85);
+  }
+  50% {
+    box-shadow: 0 0 16px 6px rgba(255, 196, 0, 0.95);
+  }
+}
+
+#mth-panel {
+  position: fixed;
+  top: 90px;
+  right: 12px;
+  width: 220px;
+  max-height: 70vh;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  z-index: 2147483647;
+  font-family: -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-size: 12px;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#mth-panel .mth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background: #1e64c8;
+  color: #fff;
+  font-weight: 700;
+  cursor: default;
+}
+
+#mth-panel .mth-collapse {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+#mth-panel .mth-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+#mth-panel.mth-collapsed .mth-body {
+  display: none;
+}
+
+#mth-panel .mth-summary {
+  font-weight: 600;
+}
+
+#mth-panel .mth-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #444;
+}
+
+#mth-panel .mth-rescan {
+  padding: 6px 8px;
+  border: 1px solid #1e64c8;
+  color: #1e64c8;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#mth-panel .mth-rescan:hover {
+  background: #eaf2ff;
+}
+
+#mth-panel .mth-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+#mth-panel .mth-list-item {
+  padding: 5px 7px;
+  background: #f2fbf6;
+  border: 1px solid #b9ecd0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#mth-panel .mth-list-item:hover {
+  background: #dff5e7;
+}
+
+#mth-panel .mth-note {
+  font-size: 10.5px;
+  color: #888;
+  line-height: 1.4;
+}

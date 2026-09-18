@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "멜론티켓 빈자리 하이라이터",
+  "version": "0.1.0",
+  "description": "좌석 선택 화면에서 예매 가능한 좌석을 찾아 강조 표시하고 사이드 패널에 목록으로 보여줍니다. 새로고침·좌석 클릭·예매는 자동화하지 않으며, 이미 화면에 그려진 좌석 상태를 읽어서 보여주기만 합니다.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ticket.melon.com/reservation/popup/onestop.htm*",
+        "https://ticket.melon.com/reservation/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
