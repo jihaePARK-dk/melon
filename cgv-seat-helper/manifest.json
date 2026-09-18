@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "CGV 좌석 자동 선택 도우미",
+  "version": "0.1.0",
+  "description": "새로고침을 대신 눌러 조건에 맞는 빈 좌석을 찾아 자동으로 선택까지만 진행합니다. 로그인·관람권 적용·결제는 자동화하지 않으며, 좌석 선택 이후는 사용자가 직접 진행합니다.",
+  "default_locale": "ko",
+  "permissions": ["activeTab", "scripting", "storage", "notifications"],
+  "host_permissions": [
+    "https://cgv.co.kr/*",
+    "https://www.cgv.co.kr/*",
+    "https://api.cgv.co.kr/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CGV 좌석 자동 선택 도우미"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

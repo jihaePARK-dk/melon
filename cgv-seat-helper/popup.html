@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CGV 좌석 자동 선택 도우미</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>CGV 좌석 자동 선택 도우미</h1>
+    <p class="scope-note">
+      새로고침 → 조건에 맞는 빈 좌석 찾기 → 좌석 선택까지만 자동으로 진행합니다.<br />
+      로그인 · 결제는 직접 해주세요.
+    </p>
+
+    <form id="form">
+      <div class="row">
+        <label>열 범위</label>
+        <input id="rowStart" maxlength="2" placeholder="F" />
+        <span>~</span>
+        <input id="rowEnd" maxlength="2" placeholder="O" />
+      </div>
+      <div class="row">
+        <label>좌석 번호</label>
+        <input id="seatStart" type="number" placeholder="16" />
+        <span>~</span>
+        <input id="seatEnd" type="number" placeholder="29" />
+      </div>
+      <div class="row">
+        <label>인원수</label>
+        <input id="peopleCount" type="number" min="1" placeholder="2" />
+      </div>
+
+      <div class="actions">
+        <button id="startBtn" type="submit">조회 시작</button>
+        <button id="stopBtn" type="button">중지</button>
+      </div>
+    </form>
+
+    <div id="status" class="status">CGV 좌석 선택 화면에서 시작해주세요.</div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
